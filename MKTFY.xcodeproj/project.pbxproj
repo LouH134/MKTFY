@@ -16,6 +16,7 @@
 		61D169E227150DF4003BECC1 /* MKTFYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169E127150DF4003BECC1 /* MKTFYUITests.swift */; };
 		61D169E427150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169E327150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift */; };
 		61D169F32715127A003BECC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169F227151279003BECC1 /* LoginViewController.swift */; };
+		61D169F5271526DE003BECC1 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D169F4271526DE003BECC1 /* CreateAccount.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		61D169E127150DF4003BECC1 /* MKTFYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTFYUITests.swift; sourceTree = "<group>"; };
 		61D169E327150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTFYUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		61D169F227151279003BECC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		61D169F4271526DE003BECC1 /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				61D169C627150DF1003BECC1 /* Main.storyboard */,
 				61D169CB27150DF3003BECC1 /* LaunchScreen.storyboard */,
+				61D169F4271526DE003BECC1 /* CreateAccount.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D169F5271526DE003BECC1 /* CreateAccount.storyboard in Resources */,
 				61D169CD27150DF3003BECC1 /* LaunchScreen.storyboard in Resources */,
 				61D169CA27150DF3003BECC1 /* Assets.xcassets in Resources */,
 				61D169C827150DF1003BECC1 /* Main.storyboard in Resources */,
