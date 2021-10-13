@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		614572BA27167F200071F5BF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572B927167F200071F5BF /* CustomButton.swift */; };
+		614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */; };
+		614572BE27168C5C0071F5BF /* CustomEntryFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572BD27168C5C0071F5BF /* CustomEntryFieldView.swift */; };
+		614572C027168C950071F5BF /* CustomEntryFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 614572BF27168C950071F5BF /* CustomEntryFieldView.xib */; };
 		61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C027150DF1003BECC1 /* AppDelegate.swift */; };
 		61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C227150DF1003BECC1 /* SceneDelegate.swift */; };
 		61D169C827150DF1003BECC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D169C627150DF1003BECC1 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		614572B927167F200071F5BF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPWDViewController.swift; sourceTree = "<group>"; };
+		614572BD27168C5C0071F5BF /* CustomEntryFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEntryFieldView.swift; sourceTree = "<group>"; };
+		614572BF27168C950071F5BF /* CustomEntryFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomEntryFieldView.xib; sourceTree = "<group>"; };
 		61D169BD27150DF1003BECC1 /* MKTFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKTFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D169C027150DF1003BECC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61D169C227150DF1003BECC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		614572B527167E9F0071F5BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				614572B627167EB00071F5BF /* Base */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		614572B627167EB00071F5BF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				614572B927167F200071F5BF /* CustomButton.swift */,
+				614572BD27168C5C0071F5BF /* CustomEntryFieldView.swift */,
+				614572BF27168C950071F5BF /* CustomEntryFieldView.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		61D169B427150DF1003BECC1 = {
 			isa = PBXGroup;
 			children = (
@@ -103,7 +129,9 @@
 			children = (
 				61D169C027150DF1003BECC1 /* AppDelegate.swift */,
 				61D169C227150DF1003BECC1 /* SceneDelegate.swift */,
+				614572B527167E9F0071F5BF /* Views */,
 				61D169F027151132003BECC1 /* ViewControllers */,
+				61D169F1271511E4003BECC1 /* Storyboards */,
 				61D169C927150DF3003BECC1 /* Assets.xcassets */,
 				61D169CE27150DF3003BECC1 /* Info.plist */,
 			);
@@ -131,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				61D169F227151279003BECC1 /* LoginViewController.swift */,
-				61D169F1271511E4003BECC1 /* Storyboards */,
+				614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +282,7 @@
 				61D169CD27150DF3003BECC1 /* LaunchScreen.storyboard in Resources */,
 				61D169CA27150DF3003BECC1 /* Assets.xcassets in Resources */,
 				61D169C827150DF1003BECC1 /* Main.storyboard in Resources */,
+				614572C027168C950071F5BF /* CustomEntryFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614572BA27167F200071F5BF /* CustomButton.swift in Sources */,
 				61D169F32715127A003BECC1 /* LoginViewController.swift in Sources */,
 				61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */,
 				61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */,
+				614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */,
+				614572BE27168C5C0071F5BF /* CustomEntryFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
