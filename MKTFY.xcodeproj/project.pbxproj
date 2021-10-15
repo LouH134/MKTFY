@@ -11,7 +11,7 @@
 		614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */; };
 		614572BE27168C5C0071F5BF /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572BD27168C5C0071F5BF /* EntryView.swift */; };
 		61854DEC2718F6BD00B5274D /* EntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61854DEB2718F6BD00B5274D /* EntryView.xib */; };
-		61854DEF2718F94800B5274D /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61854DEE2718F94800B5274D /* CustomTextView.swift */; };
+		61854DEF2718F94800B5274D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61854DEE2718F94800B5274D /* CustomTextField.swift */; };
 		61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C027150DF1003BECC1 /* AppDelegate.swift */; };
 		61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C227150DF1003BECC1 /* SceneDelegate.swift */; };
 		61D169C827150DF1003BECC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D169C627150DF1003BECC1 /* Main.storyboard */; };
@@ -46,7 +46,7 @@
 		614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPWDViewController.swift; sourceTree = "<group>"; };
 		614572BD27168C5C0071F5BF /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		61854DEB2718F6BD00B5274D /* EntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryView.xib; sourceTree = "<group>"; };
-		61854DEE2718F94800B5274D /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		61854DEE2718F94800B5274D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		61D169BD27150DF1003BECC1 /* MKTFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKTFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D169C027150DF1003BECC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61D169C227150DF1003BECC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				614572B927167F200071F5BF /* CustomButton.swift */,
-				61854DEE2718F94800B5274D /* CustomTextView.swift */,
+				61854DEE2718F94800B5274D /* CustomTextField.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				61D169F32715127A003BECC1 /* LoginViewController.swift in Sources */,
 				61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */,
 				61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */,
-				61854DEF2718F94800B5274D /* CustomTextView.swift in Sources */,
+				61854DEF2718F94800B5274D /* CustomTextField.swift in Sources */,
 				614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */,
 				614572BE27168C5C0071F5BF /* EntryView.swift in Sources */,
 			);

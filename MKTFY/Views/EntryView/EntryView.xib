@@ -19,17 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="532" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="if4-SP-HTm">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="if4-SP-HTm">
                     <rect key="frame" x="0.0" y="0.0" width="532" height="150"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-U5-zKu">
-                            <rect key="frame" x="0.0" y="0.0" width="532" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="532" height="95"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-So-wm7">
-                            <rect key="frame" x="0.0" y="30.5" width="532" height="119.5"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-So-wm7">
+                            <rect key="frame" x="0.0" y="100" width="532" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Q37-Cy-0aP"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -39,10 +42,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="if4-SP-HTm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Rk-P0-aod"/>
-                <constraint firstItem="if4-SP-HTm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YAb-fE-qQP"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="if4-SP-HTm" secondAttribute="bottom" id="oQz-QL-May"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="if4-SP-HTm" secondAttribute="trailing" id="pUZ-Hf-cH5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="if4-SP-HTm" secondAttribute="trailing" id="7Es-FC-viv"/>
+                <constraint firstItem="if4-SP-HTm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="a1t-uq-NwP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="if4-SP-HTm" secondAttribute="bottom" id="blX-xg-Zc1"/>
+                <constraint firstItem="if4-SP-HTm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zpQ-vG-zYk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="223.18840579710147" y="-172.76785714285714"/>
