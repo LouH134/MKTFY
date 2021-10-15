@@ -88,14 +88,37 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acS-rI-P4l">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaH-de-kVl">
                                                 <rect key="frame" x="0.0" y="30.5" width="374" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acS-rI-P4l">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="PWs-gd-hhc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGs-0v-Zai">
+                                                        <rect key="frame" x="307" y="0.0" width="67" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        <connections>
+                                                            <action selector="btnShowPWDPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVN-xM-rzk"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="PWs-gd-hhc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="acS-rI-P4l" secondAttribute="trailing" id="GZg-mY-NKf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="VGs-0v-Zai" secondAttribute="bottom" id="Kjq-Pb-n99"/>
+                                                    <constraint firstItem="VGs-0v-Zai" firstAttribute="top" secondItem="TaH-de-kVl" secondAttribute="top" id="VbM-rl-KVd"/>
+                                                    <constraint firstItem="acS-rI-P4l" firstAttribute="top" secondItem="TaH-de-kVl" secondAttribute="top" id="X6e-ii-5rY"/>
+                                                    <constraint firstItem="acS-rI-P4l" firstAttribute="leading" secondItem="TaH-de-kVl" secondAttribute="leading" id="dDd-i2-piW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="acS-rI-P4l" secondAttribute="bottom" id="qGD-64-mcP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VGs-0v-Zai" secondAttribute="trailing" id="x3W-Wo-EvV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-EW-wQt">
@@ -143,6 +166,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GE2-hS-eWA"/>
+                    <connections>
+                        <outlet property="btnShowPassword" destination="VGs-0v-Zai" id="xPO-6j-aVR"/>
+                        <outlet property="txtEmail" destination="pWH-jx-oOa" id="DHI-9g-Gcl"/>
+                        <outlet property="txtPassword" destination="acS-rI-P4l" id="JMy-sZ-Kec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,10 +202,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aV-Fy-7md">
-                                <rect key="frame" x="159" y="431" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7aV-Fy-7md">
+                                <rect key="frame" x="55" y="431" width="272" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obe-0V-fD9">

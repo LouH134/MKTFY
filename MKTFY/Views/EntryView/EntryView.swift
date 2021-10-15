@@ -7,8 +7,12 @@
 
 import UIKit
 
-class CustomEntryFieldView: UIView {
-
+class EntryView: UIView {
+    
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var txtEntry: UITextField!
+    
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
