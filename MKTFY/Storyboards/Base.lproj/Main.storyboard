@@ -61,10 +61,10 @@
                                 <rect key="frame" x="20" y="328.5" width="374" height="239"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-bD-GnH">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYk-Th-dqE" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
@@ -75,22 +75,27 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-D2-p7n">
-                                        <rect key="frame" x="0.0" y="99.5" width="374" height="85.5"/>
+                                        <rect key="frame" x="0.0" y="104.5" width="374" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-y0-b6Y" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="85.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="zKD-1z-Aul"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Enter password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-EW-wQt">
-                                        <rect key="frame" x="0.0" y="209" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="208.5" width="374" height="30.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECD-xm-TX5">
-                                                <rect key="frame" x="230" y="0.0" width="144" height="30"/>
+                                                <rect key="frame" x="230" y="0.0" width="144" height="30.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="I forgot my password">
                                                     <color key="titleColor" red="1" green="0.72941176470000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
