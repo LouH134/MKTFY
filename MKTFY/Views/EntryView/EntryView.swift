@@ -12,6 +12,7 @@ class EntryView: UIView, UITextFieldDelegate {
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtEntry: UITextField!
+    @IBOutlet weak var btnShowPassword: UIButton!
     
     
     var view: UIView!
@@ -47,5 +48,29 @@ class EntryView: UIView, UITextFieldDelegate {
             lblTitle.text = title
         }
     }
+    
+    @IBInspectable var placeHolderTxt: String = "PlaceHolder Text"{
+        didSet{
+            txtEntry.placeholder = placeHolderTxt
+        }
+    }
+    
+    @IBInspectable var hideBtn: Bool = true{
+        didSet{
+            btnShowPassword.isHidden = hideBtn
+        }
+    }
+    
+    @IBAction func showPWDPressed(_ sender: Any) {
+        if txtEntry.isSecureTextEntry{
+            btnShowPassword.setTitle("Hide", for: .normal)
+        }else{
+            btnShowPassword.setTitle("Show", for: .normal)
+        }
+        
+        txtEntry.isSecureTextEntry.toggle()
+    }
+    
+    
     
 }

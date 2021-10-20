@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
             <connections>
+                <outlet property="btnShowPassword" destination="Sry-1D-Iw7" id="9i7-oL-2Mo"/>
                 <outlet property="lblTitle" destination="Lc9-U5-zKu" id="DhY-tM-F3y"/>
                 <outlet property="txtEntry" destination="Tzg-So-wm7" id="KSf-mf-fYG"/>
             </connections>
@@ -19,23 +20,47 @@
             <rect key="frame" x="0.0" y="0.0" width="532" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="if4-SP-HTm">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="if4-SP-HTm">
                     <rect key="frame" x="0.0" y="0.0" width="532" height="150"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-U5-zKu">
-                            <rect key="frame" x="0.0" y="0.0" width="532" height="95"/>
+                            <rect key="frame" x="0.0" y="0.0" width="532" height="90"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-So-wm7">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-bH-JCW">
                             <rect key="frame" x="0.0" y="100" width="532" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-So-wm7" customClass="CustomTextField" customModule="MKTFY" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="532" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Q37-Cy-0aP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sry-1D-Iw7">
+                                    <rect key="frame" x="472.5" y="0.0" width="59.5" height="50"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Show"/>
+                                    <connections>
+                                        <action selector="showPWDPressed:" destination="-1" eventType="touchUpInside" id="vpi-eA-GVU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="Q37-Cy-0aP"/>
+                                <constraint firstAttribute="trailing" secondItem="Tzg-So-wm7" secondAttribute="trailing" id="LAe-Bc-qLW"/>
+                                <constraint firstAttribute="bottom" secondItem="Sry-1D-Iw7" secondAttribute="bottom" id="czv-a7-M6x"/>
+                                <constraint firstItem="Sry-1D-Iw7" firstAttribute="top" secondItem="jqv-bH-JCW" secondAttribute="top" id="mf3-am-pHp"/>
+                                <constraint firstItem="Tzg-So-wm7" firstAttribute="leading" secondItem="jqv-bH-JCW" secondAttribute="leading" id="qBC-f7-XgG"/>
+                                <constraint firstItem="Tzg-So-wm7" firstAttribute="top" secondItem="jqv-bH-JCW" secondAttribute="top" id="vry-gB-nvb"/>
+                                <constraint firstAttribute="bottom" secondItem="Tzg-So-wm7" secondAttribute="bottom" id="vxi-gf-e6U"/>
+                                <constraint firstAttribute="trailing" secondItem="Sry-1D-Iw7" secondAttribute="trailing" id="xdZ-Aw-9JL"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
@@ -51,6 +76,11 @@
             <point key="canvasLocation" x="223.18840579710147" y="-172.76785714285714"/>
         </view>
     </objects>
+    <designables>
+        <designable name="Tzg-So-wm7">
+            <size key="intrinsicContentSize" width="142" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

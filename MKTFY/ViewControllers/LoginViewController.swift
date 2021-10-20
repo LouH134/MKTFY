@@ -35,5 +35,11 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func btnForgotPWDPressed(_ sender: Any) {
+        let vc = ForgotPWDViewController.storyboardInstance(storyboardName: "Main")
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
 
 }
