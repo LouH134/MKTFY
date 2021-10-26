@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,37 +20,42 @@
             <rect key="frame" x="0.0" y="0.0" width="599" height="79"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BPL-qa-pd2">
-                    <rect key="frame" x="0.0" y="0.0" width="599" height="31"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-b5-wxr">
-                            <rect key="frame" x="0.0" y="0.0" width="166.5" height="31"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-YZ-Yya">
-                            <rect key="frame" x="216.5" y="0.0" width="166" height="31"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-eO-5ig">
-                            <rect key="frame" x="432.5" y="0.0" width="166.5" height="31"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                        </button>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-YZ-Yya">
+                    <rect key="frame" x="120" y="10" width="359" height="59"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-b5-wxr" userLabel="Left">
+                    <rect key="frame" x="10" y="10" width="24" height="59"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="btnLeftPressed:" destination="-1" eventType="touchUpInside" id="xtH-pY-nsB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQG-eO-5ig" userLabel="Right">
+                    <rect key="frame" x="522" y="10" width="67" height="59"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="BPL-qa-pd2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3AE-Ry-ESl"/>
-                <constraint firstItem="BPL-qa-pd2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="s8C-FB-dAi"/>
-                <constraint firstItem="BPL-qa-pd2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="u03-fC-TUE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wsl-YZ-Yya" secondAttribute="bottom" constant="10" id="4Jr-JW-rCU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FOr-b5-wxr" secondAttribute="bottom" constant="10" id="9LM-c7-9Sl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wsl-YZ-Yya" secondAttribute="trailing" constant="120" id="GHP-ez-qcW"/>
+                <constraint firstItem="Wsl-YZ-Yya" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="120" id="Gdt-Yz-iM7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HQG-eO-5ig" secondAttribute="bottom" constant="10" id="JSe-RW-754"/>
+                <constraint firstAttribute="trailing" secondItem="HQG-eO-5ig" secondAttribute="trailing" constant="10" id="dJe-FO-sGb"/>
+                <constraint firstItem="FOr-b5-wxr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="dds-xN-ag1"/>
+                <constraint firstItem="HQG-eO-5ig" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="kCU-Ii-4xU"/>
+                <constraint firstItem="Wsl-YZ-Yya" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="oHg-VJ-ugC"/>
+                <constraint firstItem="FOr-b5-wxr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="xXD-4j-ViA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="271.73913043478262" y="-207.92410714285714"/>
+            <point key="canvasLocation" x="271.73913043478262" y="-208.28804347826087"/>
         </view>
     </objects>
     <resources>

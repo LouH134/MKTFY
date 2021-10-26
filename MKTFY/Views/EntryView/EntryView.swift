@@ -26,6 +26,8 @@ class EntryView: UIView, UITextFieldDelegate {
         view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        
+        view.backgroundColor = .clear
         addSubview(view)
     }
     

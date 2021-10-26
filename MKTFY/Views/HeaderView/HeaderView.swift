@@ -49,6 +49,8 @@ class HeaderView: UIView {
         xibSetup()
     }
     
+    //MARK: - IBDesignables
+    
     @IBInspectable var hideRightBtn: Bool = true{
         didSet{
             btnRight.isHidden = hideRightBtn
@@ -67,10 +69,25 @@ class HeaderView: UIView {
         }
     }
     
+    @IBInspectable var leftButtonImage: UIImage = UIImage(){
+        didSet{
+            btnLeft.setImage(leftButtonImage, for: .normal)
+        }
+    }
+    
     @IBInspectable var titleColor: UIColor = .clear{
         didSet{
             lblTitle.textColor = titleColor
         }
     }
+    
+    //MARK: - IBAction
 
+    
+    @IBAction func btnLeftPressed(_ sender: Any) {
+        
+    }
+    
+    
+    
 }

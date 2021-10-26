@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="43j-QL-Ibe">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -58,13 +58,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ClY-TI-frD">
-                                <rect key="frame" x="20" y="328.5" width="374" height="239"/>
+                                <rect key="frame" x="20" y="328.66666666666669" width="374" height="239.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-bD-GnH">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYk-Th-dqE" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="80.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
@@ -75,7 +75,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YFa-D2-p7n">
-                                        <rect key="frame" x="0.0" y="104.5" width="374" height="80"/>
+                                        <rect key="frame" x="0.0" y="105" width="374" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-y0-b6Y" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
@@ -92,10 +92,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-EW-wQt">
-                                        <rect key="frame" x="0.0" y="208.5" width="374" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="208.99999999999994" width="374" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECD-xm-TX5">
-                                                <rect key="frame" x="230" y="0.0" width="144" height="30.5"/>
+                                                <rect key="frame" x="230" y="0.0" width="144" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="I forgot my password">
                                                     <color key="titleColor" red="1" green="0.72941176470000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,7 +109,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z5n-YS-n6K">
-                                <rect key="frame" x="89.5" y="191.5" width="235" height="89"/>
+                                <rect key="frame" x="89.666666666666686" y="191" width="235" height="89"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPurple" translatesAutoresizingMaskIntoConstraints="NO" id="X9B-mY-VY1">
                                         <rect key="frame" x="0.0" y="0.0" width="235" height="89"/>
@@ -125,15 +125,14 @@
                         <constraints>
                             <constraint firstItem="ClY-TI-frD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3lN-BK-53b"/>
                             <constraint firstItem="Z5n-YS-n6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cps-kk-CvK"/>
+                            <constraint firstItem="ClY-TI-frD" firstAttribute="top" secondItem="Z5n-YS-n6K" secondAttribute="bottom" constant="48.5" id="D3J-dO-XPl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ClY-TI-frD" secondAttribute="trailing" constant="20" id="GQS-AG-7G8"/>
-                            <constraint firstItem="ClY-TI-frD" firstAttribute="top" secondItem="Z5n-YS-n6K" secondAttribute="bottom" constant="48" id="Iep-Im-gyn"/>
                             <constraint firstItem="ClY-TI-frD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JDI-fn-9p6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nb8-1K-2U3" secondAttribute="trailing" constant="15" id="Jc3-BO-g84"/>
                             <constraint firstItem="Nb8-1K-2U3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="OcH-Rw-4pR"/>
                             <constraint firstItem="ZBe-cC-ejm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QLN-B5-jV5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZBe-cC-ejm" secondAttribute="trailing" id="Rgs-DZ-DpN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nb8-1K-2U3" secondAttribute="bottom" constant="15" id="URF-pN-EDr"/>
-                            <constraint firstItem="Z5n-YS-n6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="147.5" id="WHg-at-uhq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZBe-cC-ejm" secondAttribute="bottom" id="fEk-9k-g9Q"/>
                             <constraint firstItem="ZBe-cC-ejm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m5z-x6-RAc"/>
                             <constraint firstItem="ClY-TI-frD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkV-ln-Xe5"/>
@@ -148,41 +147,45 @@
         <!--ForgotPWD View Controller-->
         <scene sceneID="HgF-S0-5WV">
             <objects>
-                <viewController id="f84-tM-1Tc" customClass="ForgotPWDViewController" customModule="MKTFY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPWDViewController" id="f84-tM-1Tc" customClass="ForgotPWDViewController" customModule="MKTFY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRL-1r-0BO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCi-Cr-hy3" customClass="HeaderView" customModule="MKTFY" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="95"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="62"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="tdO-JH-gae"/>
+                                    <constraint firstAttribute="height" constant="62" id="tdO-JH-gae"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideRightBtn" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideLeftBtn" value="NO"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="setTitle" value="Forgot Password"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonImage" value="icon_back"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.38823529410000002" green="0.094117647060000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2F-mb-nNv" customClass="CustomView" customModule="MKTFY" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="oB3-hN-dki">
-                                        <rect key="frame" x="0.0" y="62" width="414" height="389"/>
+                                        <rect key="frame" x="0.0" y="62.000000000000028" width="414" height="388.66666666666674"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email" translatesAutoresizingMaskIntoConstraints="NO" id="UkZ-7v-wkL">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="132"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email so that we can send you a verification code to reset your password." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-k8-VCu">
-                                                <rect key="frame" x="20" y="194" width="374" height="41"/>
+                                                <rect key="frame" x="20" y="194" width="374" height="40.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNf-lT-xRa" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="297" width="374" height="72"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <rect key="frame" x="20" y="296.66666666666669" width="374" height="72"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="poQ-IQ-fCx"/>
                                                 </constraints>
@@ -196,7 +199,7 @@
                                         <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="20" right="20"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uq0-Gj-huJ" userLabel="Btn Send" customClass="CustomButton" customModule="MKTFY" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="551" width="374" height="64"/>
+                                        <rect key="frame" x="20" y="550.66666666666663" width="374" height="64"/>
                                         <color key="backgroundColor" red="0.38823529410000002" green="0.094117647060000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="vnz-Ad-wCS"/>
@@ -215,12 +218,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="uq0-Gj-huJ" firstAttribute="top" secondItem="oB3-hN-dki" secondAttribute="bottom" constant="100" id="FPW-dR-Zmk"/>
                                     <constraint firstAttribute="trailing" secondItem="oB3-hN-dki" secondAttribute="trailing" id="Lih-oM-Lmx"/>
                                     <constraint firstItem="oB3-hN-dki" firstAttribute="top" secondItem="S2F-mb-nNv" secondAttribute="top" constant="62" id="T2A-Dp-1iH"/>
                                     <constraint firstAttribute="trailing" secondItem="uq0-Gj-huJ" secondAttribute="trailing" constant="20" id="ZCn-l2-Jio"/>
                                     <constraint firstItem="uq0-Gj-huJ" firstAttribute="leading" secondItem="S2F-mb-nNv" secondAttribute="leading" constant="20" id="bz3-5G-zXi"/>
                                     <constraint firstItem="oB3-hN-dki" firstAttribute="leading" secondItem="S2F-mb-nNv" secondAttribute="leading" id="yqq-NR-VaW"/>
-                                    <constraint firstItem="uq0-Gj-huJ" firstAttribute="top" secondItem="oB3-hN-dki" secondAttribute="bottom" constant="100" id="zWr-ib-VIB"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="roundTop">
@@ -285,6 +288,7 @@
         </designable>
     </designables>
     <resources>
+        <image name="icon_back" width="24" height="24"/>
         <image name="icon_email" width="132" height="132"/>
         <image name="img_background_clouds_footer" width="375" height="812"/>
         <image name="logoPurple" width="235" height="89"/>
