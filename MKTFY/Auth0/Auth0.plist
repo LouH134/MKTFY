@@ -2,13 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>MKTFY.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
-	</dict>
+  <key>ClientId</key>
+  <string>oksnBQBnGG5l1MoQdahP0rt8tHhYm4pr</string>
+  <key>Domain</key>
+  <string>dev-zkebe3xe.us.auth0.com</string>
 </dict>
 </plist>

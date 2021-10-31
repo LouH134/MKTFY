@@ -85,7 +85,7 @@ class HeaderView: UIView {
 
     
     @IBAction func btnLeftPressed(_ sender: Any) {
-        
+        self.parentViewController?.dismiss(animated: true, completion: nil)
     }
     
     

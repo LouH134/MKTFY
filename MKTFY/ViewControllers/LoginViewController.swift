@@ -44,5 +44,10 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func loginBtnPressed(_ sender: Any) {
+        NetworkManager.shared.login()
+    }
+    
+    
 
 }
