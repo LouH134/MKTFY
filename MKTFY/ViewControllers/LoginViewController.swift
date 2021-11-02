@@ -6,32 +6,39 @@
 //
 
 import UIKit
+import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController {
     
   
-    @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var emailEntry: EntryView!
+    @IBOutlet weak var passwordEntry: EntryView!
     @IBOutlet weak var btnShowPassword: UIButton!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let password = KeychainWrapper.standard.string(forKey: KeyChainManager.Key.password.rawValue){
+            passwordEntry.txtEntry.text = password
+        }
+        
+        if let email = KeychainWrapper.standard.string(forKey: KeyChainManager.Key.email.rawValue){
+            emailEntry.txtEntry.text = email
+        }
     }
     
 
     //MARK: - IBAction
     
     @IBAction func btnShowPWDPressed(_ sender: Any) {
-        if txtPassword.isSecureTextEntry{
+        if passwordEntry.txtEntry.isSecureTextEntry{
             btnShowPassword.setTitle("Hide", for: .normal)
         }else{
             btnShowPassword.setTitle("Show", for: .normal)
         }
         
-        txtPassword.isSecureTextEntry.toggle()
+        passwordEntry.txtEntry.isSecureTextEntry.toggle()
         
     }
     
@@ -45,7 +52,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        NetworkManager.shared.login()
+        NetworkManager.shared.login(username: emailEntry.txtEntry.text!, password: passwordEntry.txtEntry.text!)
+        
+        KeyChainManager.shared.savePassword(password: passwordEntry.txtEntry.text!)
+        KeyChainManager.shared.saveEmail(email: emailEntry.txtEntry.text!)
     }
     
     

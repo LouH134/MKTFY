@@ -7,26 +7,38 @@
 
 import Foundation
 import Auth0
+import SwiftKeychainWrapper
 
 class NetworkManager{
     static let shared: NetworkManager = {
         return NetworkManager()
     }()
     var isLoading = false
+    var username: String?
+    var password: String?
     
     init(){
         isLoading = true
     }
     
-    func login(){
-        Auth0.webAuth().scope("openid profile").audience("https://dev-zkebe3xe.us.auth0.com/userinfo").start{ result in
-            switch result{
-            case.failure(let error):
-                print("Error: \(error)")
-            case .success(let credentials):
-                print("Crendentials: \(credentials)")
-            }
-        }
+    func login(username: String, password: String){
+        Auth0.authentication()
+                    .login(
+                        usernameOrEmail: username,
+                        password: password,
+                        realm: "Username-Password-Authentication",
+                        scope: "openid profile offline_access")
+                     .start { result in
+
+                         switch result {
+                         case .success(let credentials):
+                            print("Access Token: \(credentials.accessToken ?? "")   Refresh Token:  \(credentials.refreshToken ?? "")")
+
+                            KeychainWrapper.standard.set(credentials.accessToken ?? "", forKey: Key.refresh_Token.rawValue)
+                         case .failure(let error):
+                            print("Failed with \(error)")
+                         }
+                     }
     }
     
     func logout(){
