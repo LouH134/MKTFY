@@ -8,23 +8,24 @@
 import Foundation
 import Auth0
 import SwiftKeychainWrapper
+import Alamofire
 
 class NetworkManager{
     static let shared: NetworkManager = {
         return NetworkManager()
     }()
     var isLoading = false
-    var username: String?
+    var email: String?
     var password: String?
     
     init(){
         isLoading = true
     }
-    
-    func login(username: String, password: String){
+   
+    func login(email: String, password: String, completion: @escaping () -> Void){
         Auth0.authentication()
                     .login(
-                        usernameOrEmail: username,
+                        usernameOrEmail: email,
                         password: password,
                         realm: "Username-Password-Authentication",
                         scope: "openid profile offline_access")
@@ -38,6 +39,7 @@ class NetworkManager{
                          case .failure(let error):
                             print("Failed with \(error)")
                          }
+                         completion()
                      }
     }
     
@@ -48,5 +50,20 @@ class NetworkManager{
             }
             
         }
+    }
+    
+    func changePassword(email: String){
+        Auth0.authentication()
+            .resetPassword(email: email, connection: "Username-Password-Authentication")
+                     .start { result in
+
+                         switch result {
+                         case .success():
+                             print("Success")
+                             break
+                         case .failure(let error):
+                            print("Failed with \(error)")
+                         }
+                     }
     }
 }

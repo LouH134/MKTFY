@@ -221,6 +221,9 @@
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendBtnPressed:" destination="f84-tM-1Tc" eventType="touchUpInside" id="YRp-0W-9lm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,6 +237,9 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="roundTop">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -251,6 +257,11 @@
                             <constraint firstItem="nCi-Cr-hy3" firstAttribute="leading" secondItem="Rxm-Cx-7Yd" secondAttribute="leading" id="vXX-9F-DXc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSend" destination="uq0-Gj-huJ" id="2Tm-jw-DY7"/>
+                        <outlet property="emailEntry" destination="rNf-lT-xRa" id="3Ll-yQ-3rr"/>
+                        <outlet property="headerView" destination="nCi-Cr-hy3" id="tpt-lf-LIH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWg-j0-CVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftKeychainWrapper
+import ProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -52,7 +53,11 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        NetworkManager.shared.login(username: emailEntry.txtEntry.text!, password: passwordEntry.txtEntry.text!)
+        ProgressHUD.show()
+        
+        NetworkManager.shared.login(email: emailEntry.txtEntry.text!, password: passwordEntry.txtEntry.text!, completion: {
+            ProgressHUD.dismiss()
+        })
         
         KeyChainManager.shared.savePassword(password: passwordEntry.txtEntry.text!)
         KeyChainManager.shared.saveEmail(email: emailEntry.txtEntry.text!)
