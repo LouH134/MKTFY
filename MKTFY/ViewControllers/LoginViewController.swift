@@ -64,5 +64,12 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func createAccountBtnPressed(_ sender: Any) {
+        let vc = CreateAccountViewController.storyboardInstance(storyboardName: "Main")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
 
 }

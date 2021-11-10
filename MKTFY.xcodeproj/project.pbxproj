@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4A0BE688E8B5613B9D918E23 /* Pods_MKTFY_MKTFYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2DA2A1E166CDC45646BDEC /* Pods_MKTFY_MKTFYUITests.framework */; };
+		610BD9982734C47B00BAF850 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610BD9972734C47B00BAF850 /* CreateAccountViewController.swift */; };
+		610BD99C2734DA9900BAF850 /* CreateAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610BD99A2734DA9900BAF850 /* CreateAccountTableViewCell.swift */; };
+		610BD99D2734DA9900BAF850 /* CreateAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610BD99B2734DA9900BAF850 /* CreateAccountTableViewCell.xib */; };
+		610BD99F2734E43D00BAF850 /* AccountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610BD99E2734E43D00BAF850 /* AccountSection.swift */; };
+		610BD9A12734E45200BAF850 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610BD9A02734E45200BAF850 /* AccountItem.swift */; };
 		6112367927309A8E0072C46D /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112367827309A8E0072C46D /* Key.swift */; };
 		614572BA27167F200071F5BF /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572B927167F200071F5BF /* CustomButton.swift */; };
 		614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */; };
@@ -16,6 +21,7 @@
 		615CB9C22727A059009AA637 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615CB9C12727A059009AA637 /* UIView+.swift */; };
 		61854DEC2718F6BD00B5274D /* EntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61854DEB2718F6BD00B5274D /* EntryView.xib */; };
 		61854DEF2718F94800B5274D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61854DEE2718F94800B5274D /* CustomTextField.swift */; };
+		618AA8DD2735FC2D00130F86 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618AA8DC2735FC2D00130F86 /* UserInfo.swift */; };
 		61A58B5E2728F762003A24F1 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A58B5D2728F762003A24F1 /* Auth0.plist */; };
 		61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C027150DF1003BECC1 /* AppDelegate.swift */; };
 		61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C227150DF1003BECC1 /* SceneDelegate.swift */; };
@@ -26,7 +32,6 @@
 		61D169E227150DF4003BECC1 /* MKTFYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169E127150DF4003BECC1 /* MKTFYUITests.swift */; };
 		61D169E427150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169E327150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift */; };
 		61D169F32715127A003BECC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169F227151279003BECC1 /* LoginViewController.swift */; };
-		61D169F5271526DE003BECC1 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D169F4271526DE003BECC1 /* CreateAccount.storyboard */; };
 		61DF8911271F9FA600977102 /* ViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF8910271F9FA600977102 /* ViewController+.swift */; };
 		61DF8913271FA2CF00977102 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF8912271FA2CF00977102 /* HeaderView.swift */; };
 		61DF8916271FA31000977102 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DF8915271FA31000977102 /* HeaderView.xib */; };
@@ -59,6 +64,11 @@
 		1482A77CE3C3789326A8716F /* Pods_MKTFYTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKTFYTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B424BF8778DB52550D862F /* Pods-MKTFY-MKTFYUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKTFY-MKTFYUITests.release.xcconfig"; path = "Target Support Files/Pods-MKTFY-MKTFYUITests/Pods-MKTFY-MKTFYUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E90673624F6F80513FB1628 /* Pods-MKTFY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKTFY.debug.xcconfig"; path = "Target Support Files/Pods-MKTFY/Pods-MKTFY.debug.xcconfig"; sourceTree = "<group>"; };
+		610BD9972734C47B00BAF850 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		610BD99A2734DA9900BAF850 /* CreateAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewCell.swift; sourceTree = "<group>"; };
+		610BD99B2734DA9900BAF850 /* CreateAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountTableViewCell.xib; sourceTree = "<group>"; };
+		610BD99E2734E43D00BAF850 /* AccountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSection.swift; sourceTree = "<group>"; };
+		610BD9A02734E45200BAF850 /* AccountItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountItem.swift; sourceTree = "<group>"; };
 		6112367827309A8E0072C46D /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		614572B927167F200071F5BF /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPWDViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +77,7 @@
 		615CB9C12727A059009AA637 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		61854DEB2718F6BD00B5274D /* EntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryView.xib; sourceTree = "<group>"; };
 		61854DEE2718F94800B5274D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		618AA8DC2735FC2D00130F86 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		61A58B5D2728F762003A24F1 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		61D169BD27150DF1003BECC1 /* MKTFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKTFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D169C027150DF1003BECC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +92,6 @@
 		61D169E127150DF4003BECC1 /* MKTFYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTFYUITests.swift; sourceTree = "<group>"; };
 		61D169E327150DF4003BECC1 /* MKTFYUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKTFYUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		61D169F227151279003BECC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		61D169F4271526DE003BECC1 /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		61DF8910271F9FA600977102 /* ViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+.swift"; sourceTree = "<group>"; };
 		61DF8912271FA2CF00977102 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		61DF8915271FA31000977102 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -138,9 +148,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		610BD9992734DA3900BAF850 /* CreateAccountTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				610BD99A2734DA9900BAF850 /* CreateAccountTableViewCell.swift */,
+				610BD99B2734DA9900BAF850 /* CreateAccountTableViewCell.xib */,
+			);
+			path = CreateAccountTableViewCell;
+			sourceTree = "<group>";
+		};
 		614572B527167E9F0071F5BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				610BD9992734DA3900BAF850 /* CreateAccountTableViewCell */,
 				61DF8914271FA2D600977102 /* HeaderView */,
 				61854DED2718F6FB00B5274D /* EntryView */,
 				614572B627167EB00071F5BF /* Base */,
@@ -163,6 +183,9 @@
 			children = (
 				615CB9BF27279A31009AA637 /* MyUserDefault.swift */,
 				61FD358B272A4E9A006BF32E /* LoginResponse.swift */,
+				610BD99E2734E43D00BAF850 /* AccountSection.swift */,
+				610BD9A02734E45200BAF850 /* AccountItem.swift */,
+				618AA8DC2735FC2D00130F86 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +269,7 @@
 			children = (
 				61D169F227151279003BECC1 /* LoginViewController.swift */,
 				614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */,
+				610BD9972734C47B00BAF850 /* CreateAccountViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -255,7 +279,6 @@
 			children = (
 				61D169C627150DF1003BECC1 /* Main.storyboard */,
 				61D169CB27150DF3003BECC1 /* LaunchScreen.storyboard */,
-				61D169F4271526DE003BECC1 /* CreateAccount.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -407,13 +430,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61D169F5271526DE003BECC1 /* CreateAccount.storyboard in Resources */,
 				61854DEC2718F6BD00B5274D /* EntryView.xib in Resources */,
 				61D169CD27150DF3003BECC1 /* LaunchScreen.storyboard in Resources */,
 				61DF8916271FA31000977102 /* HeaderView.xib in Resources */,
 				61D169CA27150DF3003BECC1 /* Assets.xcassets in Resources */,
 				61D169C827150DF1003BECC1 /* Main.storyboard in Resources */,
 				61A58B5E2728F762003A24F1 /* Auth0.plist in Resources */,
+				610BD99D2734DA9900BAF850 /* CreateAccountTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,14 +571,19 @@
 				615CB9C027279A31009AA637 /* MyUserDefault.swift in Sources */,
 				61DF8911271F9FA600977102 /* ViewController+.swift in Sources */,
 				61FD358C272A4E9B006BF32E /* LoginResponse.swift in Sources */,
+				610BD9982734C47B00BAF850 /* CreateAccountViewController.swift in Sources */,
 				61F0F2542730D97700E50FCB /* KeyChainManager.swift in Sources */,
+				610BD99F2734E43D00BAF850 /* AccountSection.swift in Sources */,
 				61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */,
 				61E8757A271FB46E0079472F /* CustomView.swift in Sources */,
 				61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */,
 				61E741B8272B3687005F499F /* NetworkManager.swift in Sources */,
 				6112367927309A8E0072C46D /* Key.swift in Sources */,
 				61854DEF2718F94800B5274D /* CustomTextField.swift in Sources */,
+				610BD9A12734E45200BAF850 /* AccountItem.swift in Sources */,
 				614572BC2716862F0071F5BF /* ForgotPWDViewController.swift in Sources */,
+				610BD99C2734DA9900BAF850 /* CreateAccountTableViewCell.swift in Sources */,
+				618AA8DD2735FC2D00130F86 /* UserInfo.swift in Sources */,
 				614572BE27168C5C0071F5BF /* EntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
