@@ -22,7 +22,7 @@ class NetworkManager{
         isLoading = true
     }
    
-    func login(email: String, password: String, completion: @escaping () -> Void){
+    func login(email: String, password: String, completion: @escaping (Error?) -> Void){
         Auth0.authentication()
                     .login(
                         usernameOrEmail: email,
@@ -36,10 +36,11 @@ class NetworkManager{
                             print("Access Token: \(credentials.accessToken ?? "")   Refresh Token:  \(credentials.refreshToken ?? "")")
 
                             KeychainWrapper.standard.set(credentials.accessToken ?? "", forKey: Key.refresh_Token.rawValue)
+                             completion(nil)
                          case .failure(let error):
                             print("Failed with \(error)")
+                             completion(error)
                          }
-                         completion()
                      }
     }
     

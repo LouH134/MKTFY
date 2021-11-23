@@ -10,11 +10,13 @@ import UIKit
 class CreateAccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var userSetup: UserInfo?
+    var newUser: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userSetup = UserInfo()
+        newUser = User()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -41,7 +43,12 @@ class CreateAccountViewController: UIViewController, UITableViewDelegate, UITabl
         cell.updateData(data: item)
         cell.didEndEntry = {
             text in
-            print(text)
+            if indexPath.section == 0{
+                if indexPath.row == 0{
+                    self.newUser?.firstName = text
+                }
+            }
+    
         }
         
         return cell
@@ -50,5 +57,6 @@ class CreateAccountViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return userSetup!.data[section].title
     }
+    
 
 }

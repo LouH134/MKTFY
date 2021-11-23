@@ -56,11 +56,17 @@ class LoginViewController: UIViewController {
         ProgressHUD.show()
         
         NetworkManager.shared.login(email: emailEntry.txtEntry.text!, password: passwordEntry.txtEntry.text!, completion: {
-            ProgressHUD.dismiss()
+            error in
+            if error == nil{
+                ProgressHUD.dismiss()
+                KeyChainManager.shared.savePassword(password: self.passwordEntry.txtEntry.text!)
+                KeyChainManager.shared.saveEmail(email: self.emailEntry.txtEntry.text!)
+                //worked go to dashboard
+            }
+            
         })
         
-        KeyChainManager.shared.savePassword(password: passwordEntry.txtEntry.text!)
-        KeyChainManager.shared.saveEmail(email: emailEntry.txtEntry.text!)
+        
     }
     
     
