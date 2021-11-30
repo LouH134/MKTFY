@@ -41,15 +41,15 @@ class CreateAccountViewController: UIViewController, UITableViewDelegate, UITabl
         
         let item = userSetup!.data[indexPath.section].items[indexPath.row]
         cell.updateData(data: item)
-        cell.didEndEntry = {
-            text in
-            if indexPath.section == 0{
-                if indexPath.row == 0{
-                    self.newUser?.firstName = text
-                }
-            }
-    
-        }
+//        cell.didEndEntry = {
+//            text in
+//            if indexPath.section == 0{
+//                if indexPath.row == 0{
+//                    self.newUser?.firstName = text
+//                }
+//            }
+//
+//        }
         
         return cell
     }
@@ -58,5 +58,21 @@ class CreateAccountViewController: UIViewController, UITableViewDelegate, UITabl
         return userSetup!.data[section].title
     }
     
-
+    
+    //MARK: - IBAction
+    
+    @IBAction func btnNextPressed(_ sender: Any) {
+        newUser?.firstName =  userSetup?.data[0].items[0].text
+        newUser?.lastName = userSetup?.data[0].items[1].text
+        newUser?.email = userSetup?.data[0].items[2].text
+        newUser?.phone = userSetup?.data[0].items[3].text
+        newUser?.country = userSetup?.data[1].items[0].text
+        newUser?.city = userSetup?.data[1].items[1].text
+        newUser?.address = userSetup?.data[1].items[2].text
+        
+        
+        
+        
+    }
+    
 }

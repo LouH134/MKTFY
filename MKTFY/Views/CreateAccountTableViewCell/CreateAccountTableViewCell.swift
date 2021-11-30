@@ -11,6 +11,7 @@ class CreateAccountTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtEntry: UITextField!
+    var item: AccountItem!
     
     var didEndEntry: ((_ text: String) -> Void)?
 
@@ -27,11 +28,13 @@ class CreateAccountTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func updateData(data: AccountItem){
+        item = data
         lblTitle.text = data.title
     }
     
     //MARK: - UITextfield Delegate
     func textFieldDidEndEditing(_ textField: UITextField) {
+        item.text = textField.text
         self.didEndEntry?(txtEntry.text!)
     }
     

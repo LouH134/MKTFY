@@ -67,4 +67,10 @@ class NetworkManager{
                          }
                      }
     }
+    
+    func saveUser(){
+//        Auth0.authentication().createUser(email: <#T##String#>, password: <#T##String#>, connection: <#T##String#>)
+    }
+    
+    
 }

@@ -13,7 +13,7 @@ class EntryView: UIView, UITextFieldDelegate {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtEntry: UITextField!
     @IBOutlet weak var btnShowPassword: UIButton!
-    
+    @IBOutlet weak var lblError: UILabel!
     
     var view: UIView!
     func loadViewFromNib() -> UIView {
@@ -51,6 +51,12 @@ class EntryView: UIView, UITextFieldDelegate {
         }
     }
     
+    @IBInspectable var lblErorrTitle: String = "Title"{
+        didSet{
+            lblError.text = lblErorrTitle
+        }
+    }
+    
     @IBInspectable var placeHolderTxt: String = "PlaceHolder Text"{
         didSet{
             txtEntry.placeholder = placeHolderTxt
@@ -60,6 +66,12 @@ class EntryView: UIView, UITextFieldDelegate {
     @IBInspectable var hideBtn: Bool = true{
         didSet{
             btnShowPassword.isHidden = hideBtn
+        }
+    }
+    
+    @IBInspectable var hideLbl: Bool = true{
+        didSet{
+            lblError.isHidden = hideLbl
         }
     }
     

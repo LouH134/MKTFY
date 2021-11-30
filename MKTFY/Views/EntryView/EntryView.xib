@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
             <connections>
                 <outlet property="btnShowPassword" destination="Sry-1D-Iw7" id="9i7-oL-2Mo"/>
+                <outlet property="lblError" destination="qIP-DV-ug1" id="0SS-tc-rZw"/>
                 <outlet property="lblTitle" destination="Lc9-U5-zKu" id="DhY-tM-F3y"/>
                 <outlet property="txtEntry" destination="Tzg-So-wm7" id="KSf-mf-fYG"/>
             </connections>
@@ -22,15 +23,15 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="if4-SP-HTm">
                     <rect key="frame" x="0.0" y="0.0" width="532" height="150"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-U5-zKu">
-                            <rect key="frame" x="0.0" y="0.0" width="532" height="90"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc9-U5-zKu">
+                            <rect key="frame" x="0.0" y="0.0" width="532" height="59.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-bH-JCW">
-                            <rect key="frame" x="0.0" y="100" width="532" height="50"/>
+                            <rect key="frame" x="0.0" y="69.5" width="532" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tzg-So-wm7" customClass="CustomTextField" customModule="MKTFY" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="532" height="50"/>
@@ -60,6 +61,12 @@
                                 <constraint firstAttribute="trailing" secondItem="Sry-1D-Iw7" secondAttribute="trailing" id="xdZ-Aw-9JL"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-DV-ug1" userLabel="error">
+                            <rect key="frame" x="0.0" y="129.5" width="532" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                 </stackView>
             </subviews>
@@ -77,7 +84,7 @@
     </objects>
     <designables>
         <designable name="Tzg-So-wm7">
-            <size key="intrinsicContentSize" width="142" height="34"/>
+            <size key="intrinsicContentSize" width="156" height="34"/>
         </designable>
     </designables>
 </document>

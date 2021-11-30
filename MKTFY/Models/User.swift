@@ -15,8 +15,9 @@ class User{
     var country: String?
     var city: String?
     var address: String?
+    var password: String?
     
-    init(firstName: String, lastName: String, email: String, phone: String, country: String, city: String, address: String){
+    init(firstName: String, lastName: String, email: String, phone: String, country: String, city: String, address: String, password: String){
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
@@ -24,6 +25,7 @@ class User{
         self.country = country
         self.city = city
         self.address = address
+        self.password = password
     }
     
     init(){

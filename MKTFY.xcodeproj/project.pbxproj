@@ -24,6 +24,7 @@
 		61854DEF2718F94800B5274D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61854DEE2718F94800B5274D /* CustomTextField.swift */; };
 		618AA8DD2735FC2D00130F86 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618AA8DC2735FC2D00130F86 /* UserInfo.swift */; };
 		61A58B5E2728F762003A24F1 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A58B5D2728F762003A24F1 /* Auth0.plist */; };
+		61C8ADC62755DCEB0077B21F /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C8ADC52755DCEB0077B21F /* CreatePasswordViewController.swift */; };
 		61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C027150DF1003BECC1 /* AppDelegate.swift */; };
 		61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D169C227150DF1003BECC1 /* SceneDelegate.swift */; };
 		61D169C827150DF1003BECC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D169C627150DF1003BECC1 /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		61854DEE2718F94800B5274D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		618AA8DC2735FC2D00130F86 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		61A58B5D2728F762003A24F1 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		61C8ADC52755DCEB0077B21F /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
 		61D169BD27150DF1003BECC1 /* MKTFY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKTFY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D169C027150DF1003BECC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61D169C227150DF1003BECC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				614572BB2716862F0071F5BF /* ForgotPWDViewController.swift */,
 				610BD9972734C47B00BAF850 /* CreateAccountViewController.swift */,
 				6184BC0D2748A0C000B2BCA2 /* DashboardViewController.swift */,
+				61C8ADC52755DCEB0077B21F /* CreatePasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				61F0F2542730D97700E50FCB /* KeyChainManager.swift in Sources */,
 				610BD99F2734E43D00BAF850 /* AccountSection.swift in Sources */,
 				61D169C127150DF1003BECC1 /* AppDelegate.swift in Sources */,
+				61C8ADC62755DCEB0077B21F /* CreatePasswordViewController.swift in Sources */,
 				61E8757A271FB46E0079472F /* CustomView.swift in Sources */,
 				61D169C327150DF1003BECC1 /* SceneDelegate.swift in Sources */,
 				61E741B8272B3687005F499F /* NetworkManager.swift in Sources */,

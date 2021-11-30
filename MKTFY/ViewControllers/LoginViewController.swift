@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnForgotPWDPressed(_ sender: Any) {
         let vc = ForgotPWDViewController.storyboardInstance(storyboardName: "Main")
-        
+
         vc.modalPresentationStyle = .fullScreen
         
         self.present(vc, animated: true, completion: nil)
@@ -62,10 +62,18 @@ class LoginViewController: UIViewController {
                 KeyChainManager.shared.savePassword(password: self.passwordEntry.txtEntry.text!)
                 KeyChainManager.shared.saveEmail(email: self.emailEntry.txtEntry.text!)
                 //worked go to dashboard
+            }else{
+                problemLogingIn()
             }
             
         })
         
+        func problemLogingIn(){
+            self.emailEntry.txtEntry.layer.borderWidth = 10
+            self.emailEntry.txtEntry.layer.borderColor = UIColor.red.cgColor
+            self.emailEntry.hideLbl = false
+            self.emailEntry.lblErorrTitle = "Your Email is incorrect"
+        }
         
     }
     

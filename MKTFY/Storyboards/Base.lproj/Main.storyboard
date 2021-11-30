@@ -201,6 +201,10 @@
                             <constraint firstItem="Iup-vg-OGx" firstAttribute="top" secondItem="hmz-rI-4ws" secondAttribute="bottom" id="nfQ-8n-sov"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoriesCollectionView" destination="Bx8-wz-lAB" id="3pW-G8-zXr"/>
+                        <outlet property="itemsCollectionView" destination="6c1-IL-woo" id="Wgw-mb-4yx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HQ-4C-k6v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,6 +278,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Enter email account"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLbl" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -291,6 +296,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="NO"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Enter password"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLbl" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -401,6 +407,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Enter email"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLbl" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -519,6 +526,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="btnNextPressed:" destination="CLZ-8p-RfN" eventType="touchUpInside" id="XTj-Xw-2JB"/>
                                                     <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEd-G5-9dr"/>
                                                 </connections>
                                             </button>
@@ -568,6 +576,170 @@
             </objects>
             <point key="canvasLocation" x="887" y="800"/>
         </scene>
+        <!--Create Password View Controller-->
+        <scene sceneID="uZA-Lu-a4E">
+            <objects>
+                <viewController storyboardIdentifier="CreatePasswordViewController" id="bMc-iB-r0o" customClass="CreatePasswordViewController" customModule="MKTFY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CeT-bS-gkY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEI-25-GbG" customClass="HeaderView" customModule="MKTFY" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="62"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="bb1-v5-Z6O"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideRightBtn" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLeftBtn" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftButtonImage" value="icon_back"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="0.38823529410000002" green="0.094117647060000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="setTitle" value="Create Password"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-EO-pcs" customClass="CustomView" customModule="MKTFY" customModuleProvider="target">
+                                <rect key="frame" x="20" y="116" width="374" height="736"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dhi-KN-lTT">
+                                        <rect key="frame" x="20" y="10" width="334" height="716"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The password must have at least 6 characters and must contain 1 uppercase and 1 number." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-Ut-eqX">
+                                                <rect key="frame" x="8.3333333333333428" y="0.0" width="317.66666666666663" height="61"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMo-oP-XGi" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="81" width="334" height="80.333333333333314"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLbl" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Insert Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-Bu-BIn" customClass="EntryView" customModule="MKTFY" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="181.33333333333331" width="334" height="80.333333333333314"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideLbl" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Confirm Password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="Insert Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideBtn" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At least 6 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjM-LW-fFl">
+                                                <rect key="frame" x="88.333333333333329" y="281.66666666666669" width="157.33333333333337" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Uppercase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3L-v9-xLs">
+                                                <rect key="frame" x="119.66666666666666" y="322" width="94.666666666666657" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-gD-B9d">
+                                                <rect key="frame" x="130.33333333333334" y="362.33333333333331" width="73.333333333333343" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DP5-gd-Gd5">
+                                                <rect key="frame" x="0.0" y="402.66666666666663" width="334" height="313.33333333333337"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By checking this box, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-2m-gG3">
+                                                        <rect key="frame" x="43" y="62" width="294" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sd-W9-deV">
+                                                        <rect key="frame" x="8" y="93" width="134" height="48"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Terms of service"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="and our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPz-8e-7Ub">
+                                                        <rect key="frame" x="138" y="107" width="58" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy8-1G-oyM">
+                                                        <rect key="frame" x="197" y="96" width="118" height="42"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Privacy Policy"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTz-db-3VM" userLabel="Btn Next" customClass="CustomButton" customModule="MKTFY" customModuleProvider="target">
+                                                        <rect key="frame" x="-10" y="243" width="354" height="62"/>
+                                                        <color key="backgroundColor" red="0.38823529410000002" green="0.094117647060000004" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="62" id="g5o-Y3-bUU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Create My Account">
+                                                            <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnNextPressed:" destination="CLZ-8p-RfN" eventType="touchUpInside" id="6Bu-Ki-ZDd"/>
+                                                            <action selector="loginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IyJ-ID-Ttv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="dhi-KN-lTT" firstAttribute="leading" secondItem="JsC-EO-pcs" secondAttribute="leading" constant="20" id="9tx-65-5z2"/>
+                                    <constraint firstAttribute="bottom" secondItem="dhi-KN-lTT" secondAttribute="bottom" constant="10" id="EaQ-TV-zWa"/>
+                                    <constraint firstItem="dhi-KN-lTT" firstAttribute="top" secondItem="JsC-EO-pcs" secondAttribute="top" constant="10" id="f2P-vr-PvI"/>
+                                    <constraint firstAttribute="trailing" secondItem="dhi-KN-lTT" secondAttribute="trailing" constant="20" id="qxr-l6-Afs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundTop">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="83k-qU-N7b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="83k-qU-N7b" firstAttribute="trailing" secondItem="JsC-EO-pcs" secondAttribute="trailing" constant="20" id="0v0-wA-9Qi"/>
+                            <constraint firstItem="83k-qU-N7b" firstAttribute="trailing" secondItem="dEI-25-GbG" secondAttribute="trailing" id="3y7-zf-2eV"/>
+                            <constraint firstItem="JsC-EO-pcs" firstAttribute="top" secondItem="dEI-25-GbG" secondAttribute="bottom" constant="10" id="4cZ-hH-2Hw"/>
+                            <constraint firstItem="83k-qU-N7b" firstAttribute="bottom" secondItem="JsC-EO-pcs" secondAttribute="bottom" constant="10" id="69E-va-5ot"/>
+                            <constraint firstItem="JsC-EO-pcs" firstAttribute="leading" secondItem="83k-qU-N7b" secondAttribute="leading" constant="20" id="Jpn-x1-f9f"/>
+                            <constraint firstItem="dEI-25-GbG" firstAttribute="top" secondItem="83k-qU-N7b" secondAttribute="top" id="Srn-pt-mGL"/>
+                            <constraint firstItem="dEI-25-GbG" firstAttribute="leading" secondItem="83k-qU-N7b" secondAttribute="leading" id="nFW-ZD-1Uj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hv-gc-FIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702.8985507246377" y="818.97321428571422"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="35G-go-lwg">
             <objects>
@@ -593,6 +765,9 @@
         </designable>
         <designable name="Mgu-sc-thV">
             <size key="intrinsicContentSize" width="35" height="30"/>
+        </designable>
+        <designable name="aTz-db-3VM">
+            <size key="intrinsicContentSize" width="140" height="30"/>
         </designable>
         <designable name="oFj-NB-oHd">
             <size key="intrinsicContentSize" width="136" height="24"/>
